@@ -27,6 +27,18 @@ Example Usage:
 require_once('ConsoleProgressBar.php');
 // initiate the class with the maximum value being 100
 $progress = new ConsoleProgressBar(100);
+
+/*
+	Setting options are done using one of the following:
+	
+	$progress = new ConsoleProgressBar(100, array('step' => 5, 'barChar' => '+'));
+	
+	$progress->setOptions(array('step' => 5, 'barChar' => '+'));
+	$progress->setOptions('step', 5);
+	$progress->options = array('step' => 5);
+*/
+
+
 // Start the progress bar before the actual actions are taken place
 $progress->start();
 // This is just an example that's why a simple look is being used
